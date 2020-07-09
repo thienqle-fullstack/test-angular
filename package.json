@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "-": "0.0.1",
     "@angular/animations": "~10.0.2",
     "@angular/common": "~10.0.2",
     "@angular/compiler": "~10.0.2",
@@ -19,7 +20,10 @@
     "@angular/platform-browser": "~10.0.2",
     "@angular/platform-browser-dynamic": "~10.0.2",
     "@angular/router": "~10.0.2",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "phantomjs-prebuilt": "^2.1.16",
     "rxjs": "~6.5.5",
+    "save-dev": "0.0.1-security",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
   },
