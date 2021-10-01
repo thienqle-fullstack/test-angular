@@ -25,7 +25,7 @@ pipeline{
       steps{
         echo "Deploy application"
         bat """
-         npm build --prod
+         ng build --prod
         """
         bat """
          xcopy dist\\hello-angular G:\\NGINX\\html\\ /y /S /E /C
