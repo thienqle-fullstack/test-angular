@@ -6,6 +6,7 @@ pipeline{
       steps{
         echo "Build application"
         bat """
+          npm cache clean --force
           npm install
         """
       }
