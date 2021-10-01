@@ -2,17 +2,12 @@ pipeline{
   agent any
   
   stages {
-    stage('Clean environment'){
-      steps{
-        echo "Clean environment"
-        bat """
-          npm cache clean --force
-        """
-      }
-    }
     stage('build'){
       steps{
         echo "Build application"
+        bat """
+          npm cache clean --force
+        """
         bat """
           npm install
         """
@@ -31,6 +26,8 @@ pipeline{
         echo "Deploy application"
         bat """
          npm build --prod
+        """
+        bat """
          xcopy dist\\hello-angular G:\\NGINX\\html\\ /y /S /E /C
         """
       }
